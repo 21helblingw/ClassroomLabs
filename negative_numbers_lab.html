@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f7ff">
+<title>Negative Numbers Lab — Learn from Zero to Confident</title>
+<style>
+:root{--ink:#17213b;--muted:#596780;--paper:#f5f7ff;--card:#fff;--line:#dce3f1;--blue:#315de8;--blue2:#eaf0ff;--orange:#bd5b16;--orange2:#fff0e2;--green:#137653;--green2:#e4f8ef;--purple:#7048c8;--purple2:#f0eaff;--shadow:0 12px 34px #24355a12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1120px;margin:auto;padding:22px}.hero{padding:34px 0 22px}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--blue)}h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.05;letter-spacing:-.04em;margin:.35rem 0 1rem;max-width:850px}h2{font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.2;letter-spacing:-.025em;margin:.2rem 0 .75rem}h3{margin:.2rem 0 .5rem;line-height:1.25}p{margin:.45rem 0 1rem}.lead{font-size:1.16rem;color:var(--muted);max-width:760px}.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;align-items:stretch}.hero-art{background:linear-gradient(135deg,#e9efff,#fff0e4);border-radius:24px;padding:20px;display:flex;flex-direction:column;justify-content:center;min-height:180px}.bigline{font-size:1.3rem;font-weight:800;text-align:center}.hero-art .equation{font-size:2.3rem;text-align:center;font-weight:900;letter-spacing:.02em}.hero-art small{color:var(--muted);text-align:center}.topnav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px}.topnav a{padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:700}.topnav a:hover{border-color:var(--blue);color:var(--blue)}.progress-wrap{position:sticky;top:0;z-index:5;background:#f5f7ffee;backdrop-filter:blur(12px);padding:10px 0}.progress-inner{max-width:1120px;margin:auto;padding:0 22px;display:flex;gap:12px;align-items:center}.track{height:9px;background:#dfe5f2;border-radius:999px;overflow:hidden;flex:1}.fill{height:100%;background:linear-gradient(90deg,#315de8,#6f4bd5);width:0%;transition:width .25s}.progress-label{font-size:.85rem;font-weight:800;white-space:nowrap}.section{padding:36px 0 12px;scroll-margin-top:65px}.section-intro{max-width:800px;color:var(--muted)}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);min-width:0}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.tag{display:inline-block;padding:4px 9px;border-radius:999px;background:var(--blue2);color:#2449be;font-size:.78rem;font-weight:800;margin-bottom:8px}.callout{border-left:4px solid var(--blue);padding:12px 15px;background:var(--blue2);border-radius:0 12px 12px 0;margin:14px 0}.callout.orange{border-color:var(--orange);background:var(--orange2)}.callout.green{border-color:var(--green);background:var(--green2)}.callout.purple{border-color:var(--purple);background:var(--purple2)}.muted{color:var(--muted)}.key{display:inline-block;border:1px solid #cbd3e3;background:#f7f9fc;border-radius:7px;padding:0 7px;font-weight:800}.btn{border:0;border-radius:12px;padding:10px 15px;font-weight:800;background:var(--blue);color:white;box-shadow:0 3px 0 #203fa7}.btn:hover{filter:brightness(1.06)}.btn:active{transform:translateY(2px);box-shadow:none}.btn.secondary{background:#edf1fa;color:var(--ink);box-shadow:none;border:1px solid var(--line)}.btn.orange{background:var(--orange);box-shadow:0 3px 0 #8e3e0a}.btn.green{background:var(--green);box-shadow:0 3px 0 #0a5137}.btn-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.field{display:flex;flex-direction:column;gap:5px;font-weight:750}.field input,.field select{width:100%;border:1px solid #cbd5e7;border-radius:10px;padding:10px;background:white;color:var(--ink)}input[type=range]{padding:0;accent-color:var(--blue)}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.numberline{width:100%;height:auto;display:block;background:#f9fbff;border:1px solid var(--line);border-radius:15px;margin:12px 0}.svg-label{font:12px system-ui;fill:var(--ink)}.result{font-size:1.25rem;font-weight:850}.numberline-note{background:#f7f9ff;padding:12px;border-radius:12px}.thermo{height:185px;display:flex;align-items:center;justify-content:center;gap:24px}.thermo-track{height:160px;width:38px;border:3px solid #52617b;border-radius:20px;position:relative;overflow:hidden;background:linear-gradient(to top,#c6e5ff 0%,#fff 50%,#ffd8b2 100%)}.thermo-fill{position:absolute;bottom:0;left:0;right:0;background:#df672b;height:50%;transition:height .25s}.thermo-bulb{position:absolute;bottom:-9px;left:-7px;width:46px;height:46px;border-radius:50%;background:#df672b;border:3px solid #52617b}.thermo-scale{height:160px;display:flex;flex-direction:column;justify-content:space-between;font-weight:800}.temp-display{font-size:2.4rem;font-weight:900}.debt-coins{display:flex;flex-wrap:wrap;gap:7px;min-height:55px;align-content:flex-start}.coin{border-radius:50%;width:38px;height:38px;display:grid;place-items:center;font-size:.8rem;font-weight:900;background:#fff0e2;border:2px solid #d77b38;color:#8e3e0a}.coin.paid{background:#e4f8ef;border-color:#38a879;color:#126447}.mini-step{border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 0;background:#fbfcff}.formula{font-size:1.35rem;font-weight:900;letter-spacing:.02em}.choice-list{display:grid;gap:9px;margin:14px 0}.choice{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;text-align:left;font-weight:750;color:var(--ink)}.choice:hover{border-color:var(--blue)}.choice.correct{border-color:var(--green);background:var(--green2)}.choice.wrong{border-color:#bd4b42;background:#fff0ef}.feedback{min-height:30px;font-weight:750;margin:8px 0}.badge{display:inline-block;border-radius:8px;background:#eef1f8;padding:4px 8px;font-size:.8rem;font-weight:800}.lesson-list{display:grid;gap:10px}.lesson-row{display:flex;align-items:center;gap:12px;border:1px solid var(--line);background:white;border-radius:14px;padding:13px}.lesson-row .num{width:35px;height:35px;flex:0 0 35px;border-radius:50%;display:grid;place-items:center;background:var(--blue2);color:var(--blue);font-weight:900}.lesson-row.done .num{background:var(--green2);color:var(--green)}.lesson-row a{color:inherit;text-decoration:none;font-weight:800}.lesson-row small{display:block;color:var(--muted);font-weight:500}.footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}.sources li{margin:.6rem 0}.tiny{font-size:.86rem}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:760px){.shell{padding:15px}.progress-inner{padding:0 15px}.hero-grid,.grid2,.grid3{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.hero-art{min-height:150px}.card{padding:17px}.section{padding-top:27px}.topnav a{font-size:.82rem;padding:7px 10px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="shell hero" id="top">
+ <div class="eyebrow">The friendly math lab · start anywhere</div>
+ <div class="hero-grid">
+  <div><h1>Negative numbers make sense when you can <span style="color:var(--blue)">see</span> them.</h1>
+   <p class="lead">A step-by-step adventure from the very beginning to confident subtraction. No prior knowledge needed. Explore, move things, make mistakes, and try again.</p>
+   <div class="btn-row"><a class="btn" href="#start" style="text-decoration:none">Start learning ↓</a><a class="btn secondary" href="#practice" style="text-decoration:none">Try a practice question</a></div>
+  </div>
+  <div class="hero-art" aria-label="A number line showing negative three, zero and positive three">
+   <div class="bigline">LEFT ← smaller · bigger → RIGHT</div>
+   <svg viewBox="0 0 330 70" role="img" aria-label="Number line from negative three to positive three" style="width:100%;max-width:340px;margin:8px auto">
+    <line x1="18" y1="30" x2="312" y2="30" stroke="#5a6680" stroke-width="3"/><path d="M18 30l10 -6v12z M312 30l-10 -6v12z" fill="#5a6680"/>
+    <g fill="#315de8" stroke="#315de8"><circle cx="67" cy="30" r="5"/><circle cx="165" cy="30" r="5"/><circle cx="263" cy="30" r="5"/></g>
+    <g fill="#17213b" font-size="13" text-anchor="middle"><text x="67" y="52">−3</text><text x="165" y="52">0</text><text x="263" y="52">+3</text></g>
+   </svg>
+   <div class="equation">5 − (−2) = 7</div><small>Why does subtracting a negative make the answer bigger? We'll build the idea, not just memorize a rule.</small>
+  </div>
+ </div>
+ <nav class="topnav" aria-label="Lesson navigation">
+  <a href="#start">1. Start here</a><a href="#line">2. Number line</a><a href="#temperature">3. Temperature</a><a href="#debt">4. Debt & money</a><a href="#elevator">5. Elevator</a><a href="#rules">6. The rule</a><a href="#practice">6. Practice</a><a href="#mastery">7. Check mastery</a>
+ </nav>
+</header>
+<div class="progress-wrap"><div class="progress-inner"><span class="progress-label" id="progressLabel">Your journey: 0%</span><div class="track" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar"><div class="fill" id="progressFill"></div></div><button class="btn secondary" id="resetProgress" type="button">Reset</button></div></div>
+<main class="shell">
+<section class="section" id="start">
+ <div class="eyebrow">Level 1 · the foundations</div><h2>First: what is a number?</h2><p class="section-intro">Numbers describe amounts or positions. You already know that 3 means three things and that 8 is greater than 3. Negative numbers extend the number system to describe amounts below zero or positions to the left of zero.</p>
+ <div class="grid3">
+  <article class="card"><span class="tag">Positive</span><h3>Above / to the right</h3><p><strong>+4</strong> means four steps to the right of zero. We usually leave off the plus sign and write <strong>4</strong>.</p><div class="callout green">Positive numbers are greater than zero.</div></article>
+  <article class="card"><span class="tag">Zero</span><h3>The starting point</h3><p><strong>0</strong> means no change from the starting point. It is neither positive nor negative.</p><div class="callout">Zero is the boundary between positive and negative numbers.</div></article>
+  <article class="card"><span class="tag">Negative</span><h3>Below / to the left</h3><p><strong>−4</strong> means four steps to the left of zero. The minus sign tells you which side of zero.</p><div class="callout orange">Negative numbers are less than zero.</div></article>
+ </div>
+ <div class="card" style="margin-top:16px"><h3>Meet the number line</h3><p>Every tick mark is one equal step. Moving right makes the number bigger; moving left makes it smaller. Notice that <strong>−5 is smaller than −2</strong>, even though 5 is bigger than 2. On the negative side, farther left means a smaller number.</p>
+ <svg viewBox="0 0 720 130" class="numberline" role="img" aria-label="Number line from negative six through zero to positive six"><line x1="35" y1="58" x2="685" y2="58" stroke="#62708b" stroke-width="3"/><path d="M35 58l12 -7v14zM685 58l-12 -7v14z" fill="#62708b"/><g stroke="#62708b" stroke-width="2" fill="#17213b" font-size="15" text-anchor="middle">
+  <path d="M65 48v20M114 48v20M163 48v20M212 48v20M261 48v20M310 43v30M359 43v30M408 48v20M457 48v20M506 48v20M555 48v20M604 48v20M653 48v20"/>
+  <g stroke="none"><text x="65" y="88">−6</text><text x="114" y="88">−5</text><text x="163" y="88">−4</text><text x="212" y="88">−3</text><text x="261" y="88">−2</text><text x="310" y="88" font-weight="900">−1</text><text x="359" y="88" font-weight="900">0</text><text x="408" y="88">1</text><text x="457" y="88">2</text><text x="506" y="88">3</text><text x="555" y="88">4</text><text x="604" y="88">5</text><text x="653" y="88">6</text></g></g><text x="35" y="25" fill="#bd5b16" font-size="14" font-weight="800">SMALLER</text><text x="685" y="25" fill="#137653" font-size="14" text-anchor="end" font-weight="800">BIGGER</text></svg>
+ <div class="callout purple"><strong>Important distinction:</strong> the minus sign can mean two different things. In <strong>−3</strong>, it says “negative three,” a number. In <strong>8 − 3</strong>, it says “subtract three,” an action. We'll learn to tell which job it is doing.</div>
+ </div>
+ <div class="btn-row"><button class="btn" data-complete="start" type="button">I understand the basics ✓</button></div>
+</section>
+<section class="section" id="line">
+ <div class="eyebrow">Level 2 · make subtraction visible</div><h2>Subtraction means “start here, then move left”</h2><p class="section-intro">For now, imagine subtraction as taking steps backward on a number line. Start at the first number. A subtraction sign means move left by the amount being subtracted. The number being subtracted tells you how many steps.</p>
+ <div class="card">
+  <div class="controls">
+   <label class="field">Starting number <output id="startOut">2</output><input id="startNum" type="range" min="-8" max="8" value="2"></label>
+   <label class="field">Subtract this number <output id="subOut">3</output><input id="subNum" type="range" min="-6" max="6" value="3"></label>
+   <div><span class="field">Your equation</span><div class="formula" id="lineEquation">2 − 3 = −1</div><span class="muted tiny" id="lineHint">Start at 2, move 3 steps left.</span></div>
+  </div>
+  <svg id="interactiveLine" viewBox="0 0 720 160" class="numberline" role="img" aria-label="Interactive number line showing the subtraction movement"></svg>
+  <div class="numberline-note" id="lineExplanation" aria-live="polite">Start at 2 and move 3 steps left. You land on −1.</div>
+  <div class="callout orange"><strong>Keep the two ideas separate:</strong> “subtract” means move left. But if the amount you subtract is negative, you are subtracting a negative number. We'll explore what that means with the stories below.</div>
+  <div class="btn-row"><button class="btn secondary" id="lineExample" type="button">Show 5 − (−2)</button><button class="btn secondary" id="lineReset" type="button">Reset example</button><button class="btn" data-complete="line" type="button">Mark lesson complete ✓</button></div>
+ </div>
+ <div class="grid2" style="margin-top:16px"><article class="card"><h3>What does “subtract” mean?</h3><p>If you have 6 and subtract 2, you move two units left: 6 → 5 → 4. The answer is 4.</p><div class="formula">6 − 2 = 4</div><p class="muted">You can also think of it as taking away 2 from 6. The number line makes the direction visible.</p></article><article class="card"><h3>Can you subtract and get a bigger answer?</h3><p>Yes! If you start at 5 and subtract −2, the amount is negative. On a number line, taking away a negative amount is the opposite of taking away a positive amount: you move right 2.</p><div class="formula">5 − (−2) = 7</div><p class="muted">The next two models help explain why this makes sense.</p></article></div>
+</section>
+<section class="section" id="temperature">
+ <div class="eyebrow">Level 3 · temperature</div><h2>Below zero is still a real temperature</h2><p class="section-intro">A thermometer is a useful model because zero is a meaningful reference point. If the temperature is −3°C, it is three degrees below 0°C. A temperature change can go up or down.</p>
+ <div class="grid2">
+  <div class="card"><h3>Move the temperature</h3><label class="field">Current temperature: <output id="tempOut">−3°C</output><input id="tempNum" type="range" min="-10" max="10" value="-3"></label><div class="thermo"><div class="thermo-scale"><span>+10°</span><span>0°</span><span>−10°</span></div><div class="thermo-track"><div class="thermo-fill" id="thermoFill"></div><div class="thermo-bulb"></div></div><div><div class="temp-display" id="tempDisplay">−3°</div><div class="muted">Celsius</div></div></div><p id="tempWords" aria-live="polite">The temperature is 3 degrees below zero.</p><button class="btn" data-complete="temperature" type="button">I can read negative temperatures ✓</button></div>
+  <div class="card"><h3>Temperature change challenge</h3><p>It is <strong>−4°C</strong> outside. The temperature drops by 3 degrees. Where does it end?</p><div class="choice-list" id="tempChoices"><button class="choice" data-answer="-1">−1°C</button><button class="choice" data-answer="-7">−7°C</button><button class="choice" data-answer="7">7°C</button></div><div class="feedback" id="tempFeedback" aria-live="polite"></div><p class="muted tiny">“Drops by 3” means the temperature changes 3 degrees downward: −4 → −5 → −6 → −7.</p></div>
+ </div>
+ <div class="callout green"><strong>Connect the story to the math:</strong> “It drops by 3” can be written as adding a change of −3: \(−4 + (−3)=−7\). But the question “What is −4 − (−3)?” is different: subtracting a negative change means undoing that downward change, so it goes up to −1.</div>
+ <div class="card"><h3>Temperature subtraction: explore the difference</h3><p>Suppose the temperature is −2°C now. How much warmer is 4°C than −2°C? Count the distance between the two temperatures: −2 → −1 → 0 → 1 → 2 → 3 → 4. That's 6 degrees.</p><div class="formula">4 − (−2) = 6</div><p>The answer is the distance you move from −2 to 4 when comparing them. Keep track of whether the question says “drops by” or asks you to “subtract a negative number”—they describe different actions.</p><button class="btn" data-complete="tempstory" type="button">Temperature makes sense ✓</button></div>
+</section>
+<section class="section" id="debt">
+ <div class="eyebrow">Level 4 · debt and money</div><h2>Negative money: owing is below zero</h2><p class="section-intro">A balance of $0 means you owe nothing and have no money left. A balance of −$4 means you owe $4. Negative does not mean “bad”; it tells you which side of zero your balance is on.</p>
+ <div class="grid2">
+  <div class="card"><h3>Debt visualizer</h3><label class="field">Your balance: <output id="debtOut">−$4</output><input id="debtNum" type="range" min="-8" max="8" value="-4"></label><div class="debt-coins" id="debtCoins" aria-label="Visual representation of debt or money"></div><p id="debtWords" aria-live="polite">You owe $4.</p><p class="muted tiny">Orange coins with “−” show dollars owed. Green coins with “+” show dollars you have above zero.</p></div>
+  <div class="card"><h3>What does subtracting a debt mean?</h3><p>Imagine your balance is <strong>−$5</strong>: you owe $5. Then someone cancels $2 of the debt. Your debt gets smaller: −$5 becomes −$3.</p><div class="mini-step"><div class="formula">−5 − (−2) = −3</div><p>“Subtract a debt of $2” means remove that $2 debt from what you owe. Since the debt is removed, your balance rises toward zero.</p></div><p>Think of the negative amount as something being taken away. Taking away something negative leaves you with a higher number.</p><div class="callout orange">A real-life note: money rules depend on the situation. This is a simplified balance model to show the math, not financial advice.</div><button class="btn" data-complete="debt" type="button">I understand debt as a negative ✓</button></div>
+ </div>
+ <div class="card" style="margin-top:16px"><h3>Debt cancellation: try it</h3><p>Choose how much you owe, then choose how much debt is cancelled.</p><div class="controls"><label class="field">Starting balance (negative means owe)<output id="balOut">−$6</output><input type="range" id="balance" min="-10" max="5" value="-6"></label><label class="field">Debt cancelled<output id="cancelOut">$3</output><input type="range" id="cancel" min="0" max="8" value="3"></label><div><span class="field">New balance</span><div class="formula" id="debtEquation">−6 − (−3) = −3</div><div class="muted tiny" id="debtResult">You still owe $3.</div></div></div><button class="btn" data-complete="cancel" type="button">Debt cancellation understood ✓</button></div>
+</section>
+
+<section class="section" id="elevator">
+ <div class="eyebrow">Level 5 · the elevator</div><h2>Floors below ground are negative numbers</h2>
+ <p class="section-intro">Imagine a building with a lobby on floor 0, floors 1, 2, and 3 above it, and basement floors −1, −2, and −3 below it. The floor number tells you where you are. Going up makes the number bigger; going down makes it smaller.</p>
+ <div class="grid2">
+  <div class="card">
+   <h3>Ride the elevator</h3>
+   <p>Choose a starting floor and a movement. Watch where the elevator lands.</p>
+   <div class="controls">
+    <label class="field">Start on floor <output id="liftStartOut">−2</output><input id="liftStart" type="range" min="-5" max="5" value="-2"></label>
+    <label class="field">Move <select id="liftAction"><option value="up">up</option><option value="down" selected>down</option></select></label>
+    <label class="field">How many floors? <output id="liftStepsOut">3</output><input id="liftSteps" type="range" min="0" max="5" value="3"></label>
+   </div>
+   <div style="display:grid;grid-template-columns: minmax(0,1fr) minmax(100px,.7fr);gap:15px;align-items:center">
+    <svg id="liftBuilding" viewBox="0 0 300 310" role="img" aria-label="Interactive elevator building showing floors above and below the lobby" style="width:100%;background:#f8faff;border:1px solid var(--line);border-radius:14px"></svg>
+    <div><div class="muted tiny">Your elevator trip</div><div class="formula" id="liftEquation">−2 − 3 = −5</div><p id="liftWords" aria-live="polite">Start at −2 and go down 3 floors to −5.</p></div>
+   </div>
+   <div class="callout orange"><strong>Remember:</strong> floor 0 is the lobby. Basement floors are negative. A floor number is a location, while “go up” and “go down” describe movement.</div>
+   <button class="btn" data-complete="elevator" type="button">I can use the elevator model ✓</button>
+  </div>
+  <div class="card">
+   <h3>What does subtracting a negative floor change mean?</h3>
+   <p>You are on floor <strong>−2</strong>. A planned elevator movement of <strong>−3 floors</strong> means going down 3 floors. If you <em>subtract that movement</em>, you undo the downward trip: the elevator goes up 3 floors instead.</p>
+   <div class="mini-step"><div class="formula">−2 − (−3) = 1</div><p>Start at basement floor −2. Subtracting the negative movement reverses it, so go up: −1, 0, 1.</p></div>
+   <p>Compare these carefully:</p>
+   <div class="mini-step"><strong>Go down 3 floors from −2</strong><div class="formula">−2 + (−3) = −5</div></div>
+   <div class="mini-step"><strong>Subtract a downward movement of −3</strong><div class="formula">−2 − (−3) = 1</div></div>
+   <p class="muted tiny">This model is about floor numbers and movement. The elevator is not literally “taking away a floor”; it helps you picture reversing a negative change.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="rules">
+ <div class="eyebrow">Level 5 · why the rule works</div><h2>Why does subtracting a negative become addition?</h2><p class="section-intro">You may hear “two negatives make a positive.” That phrase alone can be confusing. Instead, use the models to understand the action. Then the shortcut becomes a summary of what you already understand.</p>
+ <div class="card"><span class="tag">Model 1 · number line</span><h3>Subtract means reverse the direction of the amount</h3><p>For <strong>5 − 2</strong>, start at 5 and move 2 steps left: you land at 3. For <strong>5 − (−2)</strong>, you are subtracting an amount that points left. Reversing that direction means move 2 steps right: you land at 7.</p>
+  <div class="grid2"><div class="mini-step"><strong>Subtract positive 2</strong><div class="formula">5 − 2 = 3</div><p>Move left 2.</p><svg viewBox="0 0 300 58" style="width:100%" role="img" aria-label="Arrow moves left from 5 to 3"><line x1="12" y1="30" x2="288" y2="30" stroke="#8b96aa" stroke-width="2"/><path d="M12 30l8 -5v10zM288 30l-8 -5v10z" fill="#8b96aa"/><path d="M235 16H153l10 -7m-10 7 10 7" fill="none" stroke="#bd5b16" stroke-width="3"/><circle cx="235" cy="30" r="5" fill="#315de8"/><circle cx="153" cy="30" r="5" fill="#bd5b16"/><text x="235" y="52" text-anchor="middle" font-size="12">5</text><text x="153" y="52" text-anchor="middle" font-size="12">3</text></svg></div>
+  <div class="mini-step"><strong>Subtract negative 2</strong><div class="formula">5 − (−2) = 7</div><p>Move right 2.</p><svg viewBox="0 0 300 58" style="width:100%" role="img" aria-label="Arrow moves right from 5 to 7"><line x1="12" y1="30" x2="288" y2="30" stroke="#8b96aa" stroke-width="2"/><path d="M12 30l8 -5v10zM288 30l-8 -5v10z" fill="#8b96aa"/><path d="M153 16H235l-10 -7m10 7-10 7" fill="none" stroke="#137653" stroke-width="3"/><circle cx="153" cy="30" r="5" fill="#315de8"/><circle cx="235" cy="30" r="5" fill="#137653"/><text x="153" y="52" text-anchor="middle" font-size="12">5</text><text x="235" y="52" text-anchor="middle" font-size="12">7</text></svg></div></div>
+ </div>
+ <div class="grid2" style="margin-top:16px">
+  <div class="card"><span class="tag">Model 2 · debt</span><h3>Taking away an owing amount</h3><p>You owe $5, so your balance is −5. If $2 of debt disappears, you owe only $3. Your balance improves from −5 to −3.</p><div class="formula">−5 − (−2) = −3</div><p>Removing debt moves your balance to the right, toward zero.</p></div>
+  <div class="card"><span class="tag">Model 3 · opposite operations</span><h3>Subtraction undoes addition</h3><p>Adding −2 moves you 2 to the left. Subtracting −2 undoes that leftward change, so it moves you 2 to the right. These operations cancel each other.</p><div class="formula">x − (−2) = x + 2</div><p>For example, 5 − (−2) = 5 + 2 = 7.</p></div>
+ </div>
+ <div class="callout purple"><strong>The rule, now that you know why:</strong> subtracting a number is the same as adding its opposite. The opposite of −2 is +2, so <strong>5 − (−2) = 5 + 2</strong>. The opposite of +2 is −2, so <strong>5 − 2 = 5 + (−2)</strong>.</div>
+ <div class="card"><h3>Turn subtraction into addition</h3><p>Use the helper to see the transformation.</p><div class="controls"><label class="field">First number <output id="ruleAOut">−3</output><input id="ruleA" type="range" min="-8" max="8" value="-3"></label><label class="field">Number being subtracted <output id="ruleBOut">−4</output><input id="ruleB" type="range" min="-8" max="8" value="-4"></label><div><span class="field">Same value, two forms</span><div class="formula" id="ruleOriginal">−3 − (−4) = 1</div><div class="formula" id="ruleTransformed">−3 + 4 = 1</div></div></div><p class="muted" id="ruleWords">Subtracting −4 is the same as adding its opposite, +4.</p><button class="btn" data-complete="rules" type="button">I can explain the rule ✓</button></div>
+</section>
+<section class="section" id="common">
+ <div class="eyebrow">Level 6 · avoid the traps</div><h2>Three common mistakes—and how to fix them</h2>
+ <div class="grid3">
+  <article class="card"><h3>“A negative is always smaller in absolute size.”</h3><p>Not quite. Compare the actual positions: −8 is less than −3 because −8 is farther left. A number's value is its position, not just the size of the digits.</p><div class="formula">−8 &lt; −3</div></article>
+  <article class="card"><h3>“Two minus signs always make a plus.”</h3><p>Don't blindly count symbols. In <strong>−5 − (−2)</strong>, the first minus belongs to negative five; the second is the subtraction action; the last belongs to negative two. Think “subtract the opposite” to transform the operation.</p><div class="formula">−5 − (−2) = −5 + 2</div></article>
+  <article class="card"><h3>“Subtracting always makes smaller.”</h3><p>Subtracting a positive number moves left, but subtracting a negative number moves right. The operation and the sign of the amount work together.</p><div class="formula">4 − 6 = −2<br>4 − (−6) = 10</div></article>
+ </div>
+</section>
+<section class="section" id="practice">
+ <div class="eyebrow">Level 7 · practice with feedback</div><h2>Try it yourself</h2><p class="section-intro">Go one question at a time. Read the equation, predict the direction, and choose an answer. Feedback explains the reasoning—not just whether you are right.</p>
+ <div class="card">
+  <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap"><span class="badge" id="qCounter">Question 1 of 10</span><span class="badge" id="scoreBadge">Score: 0</span></div>
+  <h3 id="questionText" style="font-size:1.5rem;margin-top:14px">3 − 5 = ?</h3><p class="muted" id="questionPrompt">Start at 3. Subtracting positive 5 means move 5 steps left.</p>
+  <div class="choice-list" id="quizChoices"></div><div class="feedback" id="quizFeedback" aria-live="polite"></div>
+  <div class="btn-row"><button class="btn" id="nextQuestion" type="button" disabled>Next question →</button><button class="btn secondary" id="showHint" type="button">Give me a hint</button></div>
+  <div id="hintBox" class="callout" hidden>Remember: start at the first number. Subtracting a positive means move left. Subtracting a negative means move right by that amount.</div>
+ </div>
+ <div class="callout green"><strong>Learning tip:</strong> Getting one wrong is useful information. Read the explanation, try to say the reason in your own words, and then attempt another one. You do not need to be fast to be good at math.</div>
+</section>
+<section class="section" id="mastery">
+ <div class="eyebrow">Level 8 · your checkpoint</div><h2>Can you teach it back?</h2><p class="section-intro">Understanding means more than memorizing a trick. See whether you can explain what negative numbers mean, use a model, and solve different kinds of subtraction.</p>
+ <div class="grid2">
+  <div class="card"><h3>Your learning checklist</h3><div class="lesson-list" id="lessonChecklist">
+   <div class="lesson-row" data-lesson="start"><div class="num">1</div><div><a href="#start">I know what positive, zero, and negative mean.</a><small>Start with positions on the number line.</small></div></div>
+   <div class="lesson-row" data-lesson="line"><div class="num">2</div><div><a href="#line">I can model subtraction by moving on a number line.</a><small>Start number, direction, and number of steps.</small></div></div>
+   <div class="lesson-row" data-lesson="temperature"><div class="num">3</div><div><a href="#temperature">I can locate a negative temperature.</a><small>Below zero is negative.</small></div></div>
+   <div class="lesson-row" data-lesson="tempstory"><div class="num">4</div><div><a href="#temperature">I can distinguish a temperature drop from subtraction of a negative.</a><small>Pay attention to the story's action.</small></div></div>
+   <div class="lesson-row" data-lesson="debt"><div class="num">5</div><div><a href="#debt">I can explain a negative balance as owing money.</a><small>Debt is below zero in this model.</small></div></div>
+   <div class="lesson-row" data-lesson="elevator"><div class="num">6</div><div><a href="#elevator">I can use an elevator to model floors above and below zero.</a><small>Going up increases the floor number; going down decreases it.</small></div></div>
+   <div class="lesson-row" data-lesson="cancel"><div class="num">6</div><div><a href="#debt">I can explain why removing debt raises the balance.</a><small>Subtracting a negative moves right.</small></div></div>
+   <div class="lesson-row" data-lesson="rules"><div class="num">7</div><div><a href="#rules">I can turn subtraction into adding the opposite.</a><small>Explain why the shortcut works.</small></div></div>
+  </div><p class="muted tiny">Your progress is saved in this browser on this device. It is not sent to a server.</p></div>
+  <div class="card"><h3>Final mini-test</h3><p>Answer these three questions. Aim to explain why each answer makes sense.</p>
+   <div class="mini-step"><strong>1. Which number is smaller?</strong><div class="choice-list" id="finalQ1"><button class="choice" data-answer="a">−2</button><button class="choice" data-answer="b">−7</button><button class="choice" data-answer="c">0</button></div><div class="feedback" id="finalF1"></div></div>
+   <div class="mini-step"><strong>2. What is −3 − 4?</strong><div class="choice-list" id="finalQ2"><button class="choice" data-answer="a">1</button><button class="choice" data-answer="b">−7</button><button class="choice" data-answer="c">7</button></div><div class="feedback" id="finalF2"></div></div>
+   <div class="mini-step"><strong>3. What is 2 − (−5)?</strong><div class="choice-list" id="finalQ3"><button class="choice" data-answer="a">−3</button><button class="choice" data-answer="b">−7</button><button class="choice" data-answer="c">7</button></div><div class="feedback" id="finalF3"></div></div>
+   <div class="btn-row"><button class="btn green" id="finalFinish" type="button">Check my mastery</button></div><div class="feedback" id="finalResult" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+<section class="section" id="teacher">
+ <div class="eyebrow">For tutors, families, and curious learners</div><h2>How this learning path is designed</h2>
+ <div class="grid2">
+  <div class="card"><h3>Move from meaning to symbols</h3><p>The sequence begins with concrete stories (temperature and debt), moves to a visual number line, and then connects the models to equations and the shortcut. Students are asked to explain, explore, and practice rather than only memorize.</p><p><strong>Suggested routine:</strong> 10–15 minutes per visit. Work through one section, say the reasoning aloud, answer a few questions, then revisit a previous section on another day. Avoid racing through all levels in one sitting.</p></div>
+  <div class="card"><h3>Evidence-informed choices</h3><p>The U.S. What Works Clearinghouse practice guide recommends systematic instruction, clear mathematical language, visual representations, and number lines for students who struggle with mathematics. This site uses those approaches. Short practice with immediate explanations is included, but a website is a supplement—not a substitute for teacher feedback and individualized support.</p><p class="muted tiny">No single technique guarantees learning for every child. Check understanding by asking students to explain their reasoning and solve new problems.</p></div>
+ </div>
+ <div class="card" style="margin-top:16px"><h3>Research and free professional resources</h3><ul class="sources">
+  <li><a href="https://ies.ed.gov/ncee/wwc/PracticeGuide/26" target="_blank" rel="noopener">Institute of Education Sciences / What Works Clearinghouse — Assisting Students Struggling with Mathematics: Intervention in the Elementary Grades (2021)</a>. Evidence-based recommendations include systematic instruction, mathematical language, representations, and number lines.</li>
+  <li><a href="https://ies.ed.gov/ncee/rel/math-support-grades-3-6/teach-pd-module2-rep" target="_blank" rel="noopener">Regional Educational Laboratory — Number line and representation professional learning resources</a>. Explains how number lines help students compare quantities, model operations, and prepare for later math.</li>
+  <li><a href="https://www.sciencedirect.com/science/article/pii/S0959475225001203" target="_blank" rel="noopener">Retrieval Practice in Stepwise Worked Examples Improves Learning (2025)</a>. A study with adult learners found that prompts to retrieve each upcoming step improved later recall and problem-solving compared with studying examples without those prompts. This supports the site's “try, get feedback, explain” design, but it is not direct proof of this exact website's effectiveness with middle-school students.</li>
+ </ul><p class="muted tiny">Accuracy note: these resources inform the instructional design; this exact site has not been experimentally tested. The visual models are aids for understanding, and each real-world story has limits.</p></div>
+</section>
+<footer class="footer"><p><strong>Negative Numbers Lab</strong> · A self-contained learning site. Works offline after you save the file. No account, external JavaScript, or tracking required.</p><p><a href="#top">Back to the top ↑</a></p></footer>
+</main>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const fmt=n=>n<0?'−'+Math.abs(n):String(n);
+const money=n=>(n<0?'−$'+Math.abs(n):n>0?'$'+n:'$0');
+const lessons=['start','line','temperature','tempstory','debt','elevator','cancel','rules'];
+let completed=new Set();
+try{completed=new Set(JSON.parse(localStorage.getItem('negativeLabCompleted')||'[]'));}catch(e){}
+function save(){try{localStorage.setItem('negativeLabCompleted',JSON.stringify([...completed]));}catch(e){}updateProgress();}
+function updateProgress(){
+ const count=completed.size, pct=Math.round(count/lessons.length*100);
+ $('progressLabel').textContent='Your journey: '+pct+'%';
+ $('progressFill').style.width=pct+'%';$('progressBar').setAttribute('aria-valuenow',pct);
+ document.querySelectorAll('[data-lesson]').forEach(el=>{el.classList.toggle('done',completed.has(el.dataset.lesson));el.querySelector('.num').textContent=completed.has(el.dataset.lesson)?'✓':lessons.indexOf(el.dataset.lesson)+1;});
+}
+document.querySelectorAll('[data-complete]').forEach(b=>b.addEventListener('click',()=>{completed.add(b.dataset.complete);save();b.textContent='Completed ✓';b.classList.add('green');}));
+$('resetProgress').addEventListener('click',()=>{if(confirm('Reset your lesson checklist and saved progress?')){completed.clear();save();document.querySelectorAll('[data-complete]').forEach(b=>{b.textContent=b.dataset.complete==='start'?'I understand the basics ✓':b.dataset.complete==='elevator'?'I can use the elevator model ✓':'Mark lesson complete ✓';b.classList.remove('green');});}});
+function drawLine(){
+ const a=+$('startNum').value,b=+$('subNum').value,r=a-b,min=Math.min(-10,a,r)-1,max=Math.max(10,a,r)+1;
+ $('startOut').textContent=fmt(a);$('subOut').textContent=fmt(b);
+ $('lineEquation').textContent=fmt(a)+' − ('+fmt(b)+') = '+fmt(r);
+ $('lineHint').textContent=b<0?'Subtracting a negative means move '+Math.abs(b)+' steps right.':'Subtracting a positive means move '+b+' steps left.';
+ const width=720,left=34,right=686,y=72,span=max-min,x=n=>left+(n-min)/(max-min)*(right-left);
+ let s=`<line x1="${left}" y1="${y}" x2="${right}" y2="${y}" stroke="#75819a" stroke-width="2"/><path d="M${left} ${y}l10 -6v12z M${right} ${y}l-10 -6v12z" fill="#75819a"/>`;
+ for(let n=min;n<=max;n++){if(n%1)continue;const xx=x(n);s+=`<line x1="${xx}" y1="${y-7}" x2="${xx}" y2="${y+7}" stroke="#75819a" stroke-width="${n===0?3:1.5}"/><text x="${xx}" y="${y+27}" class="svg-label" text-anchor="middle">${fmt(n)}</text>`;}
+ const x1=x(a),x2=x(r),color=b<0?'#137653':'#bd5b16',start=Math.min(x1,x2),end=Math.max(x1,x2),head=b<0?end:start;
+ if(b!==0){s+=`<path d="M${x1} 43 L${x2} 43" stroke="${color}" stroke-width="4" stroke-linecap="round"/><path d="M${head} 43 l${b<0?-12:12} -7 l0 14 z" fill="${color}"/>`;}
+ s+=`<circle cx="${x1}" cy="${y}" r="7" fill="#315de8" stroke="white" stroke-width="2"/><circle cx="${x2}" cy="${y}" r="8" fill="${color}" stroke="white" stroke-width="2"/><text x="${x1}" y="17" class="svg-label" text-anchor="middle" font-weight="800">START ${fmt(a)}</text><text x="${x2}" y="17" class="svg-label" text-anchor="middle" font-weight="800">END ${fmt(r)}</text>`;
+ $('interactiveLine').innerHTML=s;
+ $('lineExplanation').textContent=b===0?'Subtracting zero changes nothing. You stay at '+fmt(a)+'.':b<0?'Start at '+fmt(a)+'. You are subtracting '+fmt(b)+', a negative amount, so move '+Math.abs(b)+' steps right. You land on '+fmt(r)+'.':'Start at '+fmt(a)+'. Subtracting positive '+b+' means move '+b+' steps left. You land on '+fmt(r)+'.';
+}
+$('startNum').addEventListener('input',drawLine);$('subNum').addEventListener('input',drawLine);
+$('lineExample').addEventListener('click',()=>{$('startNum').value=5;$('subNum').value=-2;drawLine();});
+$('lineReset').addEventListener('click',()=>{$('startNum').value=2;$('subNum').value=3;drawLine();});
+function updateTemp(){const t=+$('tempNum').value;$('tempOut').textContent=fmt(t)+'°C';$('tempDisplay').textContent=fmt(t)+'°';$('thermoFill').style.height=((t+10)/20*100)+'%';$('thermoFill').style.background=t<0?'#4a91d9':'#df672b';document.querySelector('.thermo-bulb').style.background=t<0?'#4a91d9':'#df672b';$('tempWords').textContent=t<0?'The temperature is '+Math.abs(t)+' degrees below zero.':t>0?'The temperature is '+t+' degrees above zero.':'The temperature is exactly zero degrees.';}
+$('tempNum').addEventListener('input',updateTemp);
+$('tempChoices').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{const ok=b.dataset.answer==='-7';$('tempChoices').querySelectorAll('button').forEach(x=>x.classList.remove('correct','wrong'));b.classList.add(ok?'correct':'wrong');$('tempFeedback').textContent=ok?'Correct. A drop of 3 means move down: −4 − 3 = −7.':'Not quite. A drop means the number gets smaller. Start at −4 and move 3 steps left: −5, −6, −7.';if(ok){completed.add('tempstory');save();}}));
+function updateDebt(){const n=+$('debtNum').value;$('debtOut').textContent=money(n);$('debtCoins').innerHTML='';const count=Math.abs(n);for(let i=0;i<Math.min(count,12);i++){const c=document.createElement('span');c.className='coin '+(n>0?'paid':'');c.textContent=(n>0?'+':'−')+'$1';$('debtCoins').appendChild(c);}if(!n)$('debtCoins').textContent='Exactly zero: no debt and no extra balance.';$('debtWords').textContent=n<0?'You owe $'+Math.abs(n)+'.':n>0?'You have $'+n+' above zero.':'Your balance is exactly zero.';}
+$('debtNum').addEventListener('input',updateDebt);
+function updateCancel(){const a=+$('balance').value,c=+$('cancel').value,r=a+c;$('balOut').textContent=money(a);$('cancelOut').textContent='$'+c;$('debtEquation').textContent=fmt(a)+' − ('+fmt(-c)+') = '+fmt(r);$('debtResult').textContent=r<0?'You still owe $'+Math.abs(r)+'.':r>0?'Your balance is $'+r+' above zero.':'Your balance is exactly zero.';}
+$('balance').addEventListener('input',updateCancel);$('cancel').addEventListener('input',updateCancel);
+function updateRule(){const a=+$('ruleA').value,b=+$('ruleB').value,r=a-b;$('ruleAOut').textContent=fmt(a);$('ruleBOut').textContent=fmt(b);$('ruleOriginal').textContent=fmt(a)+' − ('+fmt(b)+') = '+fmt(r);$('ruleTransformed').textContent=fmt(a)+' + ('+fmt(-b)+') = '+fmt(r);$('ruleWords').textContent='Subtracting '+fmt(b)+' is the same as adding its opposite, '+fmt(-b)+'. Both expressions equal '+fmt(r)+'.';}
+$('ruleA').addEventListener('input',updateRule);$('ruleB').addEventListener('input',updateRule);
+const questions=[
+ {a:3,b:5,answer:-2,prompt:'Start at 3. Subtracting positive 5 means move 5 steps left.',why:'Start at 3 and move 5 left: 2, 1, 0, −1, −2.'},
+ {a:4,b:-3,answer:7,prompt:'You are subtracting a negative number. Reverse its direction.',why:'Subtracting −3 is the same as adding +3. So 4 − (−3) = 4 + 3 = 7.'},
+ {a:-2,b:4,answer:-6,prompt:'Start left of zero at −2, then move 4 more steps left.',why:'Subtracting positive 4 means move left 4 steps: −3, −4, −5, −6.'},
+ {a:-5,b:-2,answer:-3,prompt:'Subtracting negative 2 moves right by 2.',why:'−5 − (−2) = −5 + 2 = −3. Removing 2 of debt also moves the balance toward zero.'},
+ {a:0,b:-6,answer:6,prompt:'Begin at zero. Subtract negative 6.',why:'Subtracting −6 is adding +6, so 0 − (−6) = 6.'},
+ {a:-3,b:0,answer:-3,prompt:'What happens when you subtract zero?',why:'Subtracting zero changes nothing. The answer stays −3.'},
+ {a:7,b:9,answer:-2,prompt:'Start at 7 and move 9 steps left.',why:'7 − 9 = −2. You pass zero and end two units left of it.'},
+ {a:-4,b:-5,answer:1,prompt:'Subtracting negative 5 is the same as adding positive 5.',why:'−4 − (−5) = −4 + 5 = 1.'},
+ {a:2,b:6,answer:-4,prompt:'Subtract a positive number: move left.',why:'2 − 6 = −4. Moving left 6 from 2 takes you four below zero.'},
+ {a:-6,b:-4,answer:-2,prompt:'Subtract negative 4: move right by 4.',why:'−6 − (−4) = −6 + 4 = −2.'}
+];
+let qi=0,score=0,answered=false;
+function renderQuestion(){const q=questions[qi];answered=false;$('qCounter').textContent='Question '+(qi+1)+' of '+questions.length;$('scoreBadge').textContent='Score: '+score;$('questionText').textContent=fmt(q.a)+' − ('+fmt(q.b)+') = ?';$('questionPrompt').textContent=q.prompt;$('quizFeedback').textContent='';$('nextQuestion').disabled=true;$('nextQuestion').textContent=qi===questions.length-1?'See your results →':'Next question →';$('hintBox').hidden=true;
+ let opts=[q.answer,q.answer+(q.answer>=0?2:-2),q.answer+(q.answer>=0?-3:3)];if(new Set(opts).size<3)opts=[q.answer,q.answer+1,q.answer-1];opts=opts.sort(()=>Math.random()-.5);
+ $('quizChoices').innerHTML='';opts.forEach(n=>{const b=document.createElement('button');b.className='choice';b.textContent=fmt(n);b.addEventListener('click',()=>answerQuestion(b,n));$('quizChoices').appendChild(b);});}
+function answerQuestion(btn,n){if(answered)return;answered=true;const q=questions[qi],ok=n===q.answer;document.querySelectorAll('#quizChoices button').forEach(b=>{b.disabled=true;if(b.textContent===fmt(q.answer))b.classList.add('correct');});if(!ok)btn.classList.add('wrong');if(ok)score++;$('scoreBadge').textContent='Score: '+score;$('quizFeedback').textContent=(ok?'Yes! ':'Not quite. ')+q.why;$('nextQuestion').disabled=false;}
+$('nextQuestion').addEventListener('click',()=>{if(qi<questions.length-1){qi++;renderQuestion();}else{$('questionText').textContent='Practice complete!';$('questionPrompt').textContent='You scored '+score+' out of '+questions.length+'. Review any explanation that felt confusing, then try again.';$('quizChoices').innerHTML='';$('quizFeedback').textContent=score>=8?'Great work. Now try the final mini-test and explain your reasoning.':'Practice is how this gets easier. Revisit the number line and work through the questions again.';$('nextQuestion').textContent='Try again';$('nextQuestion').disabled=false;$('nextQuestion').onclick=()=>{qi=0;score=0;renderQuestion();$('nextQuestion').onclick=null;};if(score>=8){completed.add('rules');save();}}});
+$('showHint').addEventListener('click',()=>{$('hintBox').hidden=!$('hintBox').hidden;});
+const finals=[
+ {id:'finalQ1',correct:'b',feedback:'−7 is farther left than −2, so −7 is smaller.'},
+ {id:'finalQ2',correct:'b',feedback:'Start at −3 and subtract 4: move left four steps to −7.'},
+ {id:'finalQ3',correct:'c',feedback:'Subtracting −5 means add +5: 2 + 5 = 7.'}
+];let finalAnswers={};
+finals.forEach((q,i)=>$(q.id).querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{finalAnswers[i]=b.dataset.answer;$(q.id).querySelectorAll('button').forEach(x=>x.classList.remove('correct','wrong'));b.classList.add(b.dataset.answer===q.correct?'correct':'wrong');$('finalF'+(i+1)).textContent=b.dataset.answer===q.correct?q.feedback:'Try again: '+q.feedback;})));
+$('finalFinish').addEventListener('click',()=>{const got=finals.filter((q,i)=>finalAnswers[i]===q.correct).length;$('finalResult').textContent='You got '+got+' out of 3. '+(got===3?'Excellent—you have a strong start. Explain each answer out loud to check your understanding.':'That is okay. Revisit the sections linked in the explanations and try again.');if(got===3){completed.add('start');completed.add('line');completed.add('rules');save();}});
+
+function updateLift(){
+ const start=+$('liftStart').value,steps=+$('liftSteps').value,up=$('liftAction').value==='up';
+ const end=start+(up?steps:-steps);
+ $('liftStartOut').textContent=fmt(start);$('liftStepsOut').textContent=steps;
+ $('liftEquation').textContent=fmt(start)+(up?' + ':' − ')+steps+' = '+fmt(end);
+ $('liftWords').textContent='Start at floor '+fmt(start)+' and go '+(up?'up ':'down ')+steps+' floor'+(steps===1?'':'s')+'. You land on '+fmt(end)+'.';
+ const top=5,bottom=-5,y=f=>24+(top-f)*26;
+ let s='';
+ for(let f=top;f>=bottom;f--){
+  const yy=y(f);
+  const fill=f===0?'#e8edf7':f<0?'#fff0e2':'#e4f8ef';
+  s+=`<rect x="70" y="${yy-11}" width="160" height="24" rx="4" fill="${fill}" stroke="#cbd5e7"/>`;
+  s+=`<text x="52" y="${yy+5}" font-size="12" text-anchor="end" fill="#17213b">${fmt(f)}</text>`;
+  s+=`<text x="84" y="${yy+5}" font-size="10" fill="#596780">${f===0?'LOBBY':f<0?'BASEMENT':'FLOOR'}</text>`;
+ }
+ const y1=y(start),y2=y(end),c=up?'#137653':'#bd5b16';
+ s+=`<rect x="178" y="${y(start)-9}" width="36" height="20" rx="4" fill="#315de8" stroke="white" stroke-width="2"/><text x="196" y="${y(start)+5}" text-anchor="middle" font-size="11" fill="white" font-weight="800">YOU</text>`;
+ if(steps>0){const x=252; s+=`<path d="M${x} ${y1} L${x} ${y2}" stroke="${c}" stroke-width="4" stroke-linecap="round"/><path d="M${x} ${y2} l-6 ${up?'-8':'8'} h12 z" fill="${c}"/>`;}
+ s+=`<text x="150" y="300" text-anchor="middle" font-size="11" fill="#596780">Above 0 = upper floors · Below 0 = basement</text>`;
+ $('liftBuilding').innerHTML=s;
+}
+$('liftStart').addEventListener('input',updateLift);
+$('liftSteps').addEventListener('input',updateLift);
+$('liftAction').addEventListener('change',updateLift);
+
+updateLift();
+updateProgress();drawLine();updateTemp();updateDebt();updateCancel();updateRule();renderQuestion();
+})();
+</script>
+</body>
+</html>
