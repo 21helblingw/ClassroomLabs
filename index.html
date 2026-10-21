@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f7f4">
+<meta name="description" content="Interactive classroom labs that make big ideas easier to explore.">
+<title>Classroom Labs | Interactive Learning</title>
+<style>
+:root{color-scheme:light;--ink:#17213b;--muted:#596780;--paper:#f5f7f4;--surface:#fff;--line:#dce3df;--blue:#315de8;--blue-soft:#eaf0ff;--orange:#bd5b16;--orange-soft:#fff0e2;--green:#137653;--green-soft:#e4f8ef}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background-color:var(--paper);background-image:linear-gradient(#dce3df55 1px,transparent 1px),linear-gradient(90deg,#dce3df55 1px,transparent 1px);background-size:32px 32px;font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+.site-header{background:#f5f7f4ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav-inner,.main,.footer-inner{width:min(1080px,calc(100% - 40px));margin-inline:auto}
+.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:.97rem;font-weight:800}
+.brand-mark{width:30px;height:30px;display:grid;place-items:center;background:var(--ink);color:white;border-radius:6px;font-family:Georgia,serif;font-size:1.1rem}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{padding:8px 12px;border-radius:5px;text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:700}
+.nav-links a:hover,.nav-links a[aria-current=page]{background:var(--blue-soft);color:var(--blue)}
+.main{padding:64px 0 76px}
+.intro{max-width:720px;margin-bottom:44px}
+.eyebrow{margin:0 0 10px;color:var(--green);font-size:.76rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:0}
+h1{font-size:clamp(2.8rem,7vw,5rem);line-height:1.03;margin-bottom:16px}
+.intro p:last-child{max-width:620px;margin:0;color:var(--muted);font-size:1.08rem}
+.library-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:13px;border-bottom:1px solid #aebbb4}
+.library-heading h2{margin:0;font-size:1.65rem}
+.library-count{color:var(--muted);font-size:.85rem;font-weight:700}
+.lab-list{display:grid;gap:12px;margin-top:16px}
+.lab-card{display:grid;grid-template-columns:8px minmax(0,1fr) auto;align-items:stretch;min-height:190px;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:7px;text-decoration:none;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;animation:arrive .45s ease both}
+.lab-card:hover{transform:translateY(-2px);border-color:#a9baf5;box-shadow:0 12px 28px #17213b12}
+.lab-accent{background:var(--blue)}
+.lab-content{padding:25px 28px}
+.lab-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;color:var(--muted);font-size:.78rem;font-weight:750;text-transform:uppercase}
+.lab-level{padding:3px 8px;border-radius:4px;background:var(--green-soft);color:var(--green)}
+.lab-content h3{margin:0 0 6px;font-family:Georgia,"Times New Roman",serif;font-size:1.6rem;font-weight:500;letter-spacing:0}
+.lab-content p{max-width:600px;margin:0;color:var(--muted)}
+.lab-art{width:180px;display:grid;place-items:center;margin:20px 24px 20px 0;padding:10px;background:var(--blue-soft);border-radius:5px}
+.lab-art svg{display:block;width:100%;height:auto}
+.arrow{align-self:center;margin:0 22px;color:var(--blue);font-size:1.5rem;font-weight:700;transition:transform .18s ease}
+.lab-card:hover .arrow{transform:translateX(4px)}
+.growth-note{display:flex;align-items:center;gap:14px;margin-top:28px;padding:17px 19px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted)}
+.growth-symbol{flex:none;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:var(--orange-soft);color:var(--orange);font-size:1.1rem;font-weight:800}
+.growth-note p{margin:0;font-size:.92rem}
+.growth-note strong{color:var(--ink)}
+.site-footer{border-top:1px solid var(--line);background:#f5f7f4ed}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;padding:22px 0;color:var(--muted);font-size:.85rem}
+.footer-inner p{margin:0}
+.footer-inner a{color:var(--blue);font-weight:700;text-decoration-thickness:1px;text-underline-offset:3px}
+@keyframes arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:650px){.nav-inner,.main,.footer-inner{width:min(100% - 30px,1080px)}.main{padding:46px 0 54px}.intro{margin-bottom:34px}.lab-card{grid-template-columns:6px minmax(0,1fr) auto;min-height:0}.lab-content{padding:20px 17px}.lab-content h3{font-size:1.35rem}.lab-art{grid-column:2;grid-row:2;width:auto;max-width:240px;height:90px;margin:0 17px 18px;padding:5px}.lab-art svg{max-height:76px}.arrow{grid-column:3;grid-row:1;margin:0 15px 0 0}.footer-inner{flex-direction:column;gap:7px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="site-header">
+ <nav class="nav-inner" aria-label="Site navigation">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">C</span><span>Classroom Labs</span></a>
+  <div class="nav-links"><a href="index.html" aria-current="page">Home</a><a href="negative_numbers_lab.html">Negative Numbers</a></div>
+ </nav>
+</header>
+<main class="main">
+ <section class="intro" aria-labelledby="page-title">
+  <p class="eyebrow">Explore · experiment · understand</p>
+  <h1 id="page-title">Classroom Labs</h1>
+  <p>Interactive lessons for curious learners. Explore a concept, test your thinking, and learn at your own pace.</p>
+ </section>
+ <section aria-labelledby="library-title">
+  <div class="library-heading"><h2 id="library-title">Learning library</h2><span class="library-count">1 lab</span></div>
+  <div class="lab-list">
+   <a class="lab-card" href="negative_numbers_lab.html">
+    <span class="lab-accent" aria-hidden="true"></span>
+    <span class="lab-content">
+     <span class="lab-meta"><span class="lab-level">Math</span><span>Interactive lesson</span></span>
+     <h3>Negative Numbers Lab</h3>
+     <p>Explore number lines, temperatures, debt, and more. Build an understanding of subtracting negative numbers through interactive models and practice.</p>
+    </span>
+    <span class="lab-art" aria-hidden="true">
+     <svg viewBox="0 0 220 74" role="presentation">
+      <line x1="16" y1="30" x2="204" y2="30" stroke="#596780" stroke-width="2"/>
+      <path d="M16 30l8-5v10zM204 30l-8-5v10z" fill="#596780"/>
+      <g stroke="#596780" stroke-width="1.5"><path d="M48 23v14M80 23v14M112 18v24M144 23v14M176 23v14"/></g>
+      <circle cx="80" cy="30" r="5" fill="#bd5b16"/><circle cx="112" cy="30" r="5" fill="#315de8"/><circle cx="176" cy="30" r="5" fill="#137653"/>
+      <g fill="#17213b" font-family="Georgia,serif" font-size="14" text-anchor="middle"><text x="80" y="60">−2</text><text x="112" y="60">0</text><text x="176" y="60">+4</text></g>
+     </svg>
+    </span>
+    <span class="arrow" aria-hidden="true">→</span>
+   </a>
+  </div>
+  <div class="growth-note"><span class="growth-symbol" aria-hidden="true">+</span><p><strong>This library is growing.</strong> New lessons will appear here as they are added.</p></div>
+ </section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><p>Classroom Labs · Open learning resources</p><p><a href="negative_numbers_lab.html">Open Negative Numbers Lab</a></p></div></footer>
+</body>
+</html>
